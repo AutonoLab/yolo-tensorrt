@@ -215,9 +215,9 @@ void DsImage::addBBox(BBoxInfo box, const std::string& labelName)
 
 void DsImage::showImage() const
 {
-    cv::namedWindow(m_ImageName);
-    cv::imshow(m_ImageName.c_str(), m_MarkedImage);
-    cv::waitKey(0);
+    //cv::namedWindow(m_ImageName);
+    //cv::imshow(m_ImageName.c_str(), m_MarkedImage);
+    //cv::waitKey(0);
 }
 
 void DsImage::saveImageJPEG(const std::string& dirPath) const
