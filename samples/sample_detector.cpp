@@ -1,6 +1,8 @@
 #include "class_timer.hpp"
 #include "class_detector.h"
 
+//#include </usr/local/cuda-10.2/targets/aarch64-linux/include/nvToolsExt.h>
+
 #include <memory>
 #include <thread>
 
@@ -63,6 +65,7 @@ int main()
 
 		//detect
 		timer.reset();
+        //nvtxRangeId_t id1 = nvtxRangeStartA(":nvtxRangeStartA"); TODO: REMOVE this and the include line at the top of the file      
 		detector->detect(batch_img, batch_res);
 		timer.out("detect");
 

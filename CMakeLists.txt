@@ -16,6 +16,9 @@ find_package(CUDA REQUIRED)
 #set(OpenCV_DIR /opt/opencv-4.1.2/share/OpenCV)
 find_package(OpenCV REQUIRED)
 
+#vpi
+find_package(vpi REQUIRED)
+
 #detector lib (cuda)
 file(GLOB_RECURSE sources modules/*.hpp modules/*.cpp modules/*.h modules/*.cu extra/*.h)
 add_library(detector SHARED ${sources})
@@ -26,6 +29,5 @@ target_link_libraries(detector nvinfer nvinfer_plugin nvcaffe_parser "stdc++fs")
 add_executable(yolo-trt samples/sample_detector.cpp)				  
 target_include_directories(yolo-trt PRIVATE modules/ extra/)
 target_link_libraries(yolo-trt detector ${OpenCV_LIBS})
-
-
+target_link_libraries(yolo-trt detector vpi)
 

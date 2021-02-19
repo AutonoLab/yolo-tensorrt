@@ -23,6 +23,11 @@ SOFTWARE.
 *
 */
 #include "ds_image.h"
+
+// VPI ------------------
+#include "vpi.h"
+// ----------------------
+
 #include <experimental/filesystem>
 
 DsImage::DsImage() :
@@ -79,8 +84,11 @@ DsImage::DsImage(const cv::Mat& mat_image_, const std::string &s_net_type_, cons
 		assert(2 * m_XOffset + resizeW == inputW);
 		assert(2 * m_YOffset + resizeH == inputH);
 
+        // VPI TEST: TODO: uncomment cv::resize line below
+        m_LetterboxImage = vpi_resize_image(m_OrigImage, resizeH, resizeW, VPIDeviceType::VPI_DEVICE_TYPE_CUDA);
+
 		// resizing
-		cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(resizeW, resizeH), 0, 0, cv::INTER_CUBIC);
+		//cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(resizeW, resizeH), 0, 0, cv::INTER_CUBIC);
 		// letterboxing
 		cv::copyMakeBorder(m_LetterboxImage, m_LetterboxImage, m_YOffset, m_YOffset, m_XOffset,
 			m_XOffset, cv::BORDER_CONSTANT, cv::Scalar(128, 128, 128));
@@ -90,7 +98,10 @@ DsImage::DsImage(const cv::Mat& mat_image_, const std::string &s_net_type_, cons
 	}
 	else
 	{
-		cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(inputW, inputH), 0, 0, cv::INTER_CUBIC);
+		// VPI TEST: TODO: uncomment cv::resize line below
+        m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIDeviceType::VPI_DEVICE_TYPE_CUDA);
+
+        //cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(inputW, inputH), 0, 0, cv::INTER_CUBIC);
 		// converting to RGB
 		//cv::cvtColor(m_LetterboxImage, m_LetterboxImage, cv::COLOR_BGR2RGB);
 	}
