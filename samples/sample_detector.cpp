@@ -1,5 +1,8 @@
 #include "class_timer.hpp"
 #include "class_detector.h"
+#include "nvToolsExt.h"
+#include "/usr/local/cuda-10.2/targets/aarch64-linux/include/nvToolsExt.h"
+
 
 #include <memory>
 #include <thread>
@@ -7,6 +10,8 @@
 
 int main()
 {
+nvtxRangeId_t t;
+t = nvtxRangeStart("MyFunction_timing");
 	Config config_v3;
 	config_v3.net_type = YOLOV3;
 	config_v3.file_model_cfg = "../configs/yolov3.cfg";
@@ -28,7 +33,7 @@ int main()
 	config_v4.file_model_cfg = "../configs/yolov4.cfg";
 	config_v4.file_model_weights = "../configs/yolov4.weights";
 	config_v4.calibration_image_list_file_txt = "../configs/calibration_images.txt";
-	config_v4.inference_precison =INT8;
+	config_v4.inference_precison =FP16;
 	config_v4.detect_thresh = 0.5;
 
 	Config config_v4_tiny;
@@ -82,4 +87,6 @@ int main()
 		//cv::waitKey(10);
         
 	}
+
+//nvtxRangeEnd(t);
 }

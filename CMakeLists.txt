@@ -8,8 +8,8 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath -Wl,$ORIGIN")
 
 #cuda
 #export PATH=/usr/local/cuda-11.0/bin:$PATH
-#include_directories(/usr/local/cuda/include)
-#link_directories(/usr/local/cuda/lib64)
+include_directories(/usr/local/cuda/include)
+link_directories(/usr/local/cuda/lib64)
 find_package(CUDA REQUIRED)
 
 #opencv

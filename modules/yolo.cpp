@@ -53,33 +53,39 @@ Yolo::Yolo( const NetworkInfo& networkInfo, const InferParams& inferParams) :
 	}
 	m_EnginePath = networkInfo.data_path + "-" + m_Precision + "-batch" + std::to_string(m_BatchSize) + ".engine";
 	if (m_Precision == "kFLOAT")
-	{
+	{	
+std::cout << "Unrecognized precision type " << m_Precision << std::endl;
 		if ("yolov5" == m_NetworkType)
 		{
-
+			std::cout << "Yolo5 engine created "  << std::endl;
 			create_engine_yolov5();
 		}
 		else
 		{
+std::cout << "Yolo engine created "  << std::endl;
 			createYOLOEngine();
 		}
 	}
 	else if (m_Precision == "kINT8")
 	{
+std::cout << "Unrecognized precision type " << m_Precision << std::endl;
 		Int8EntropyCalibrator calibrator(m_BatchSize, m_CalibImages, m_CalibImagesFilePath,
 			m_CalibTableFilePath, m_InputSize, m_InputH, m_InputW,
 			m_InputBlobName,m_NetworkType);
 		if ("yolov5" == m_NetworkType)
 		{
+std::cout << "Yolo5 engine created "  << std::endl;
 			create_engine_yolov5(nvinfer1::DataType::kINT8, &calibrator);
 		}
 		else
 		{
+std::cout << "Yolo engine created "  << std::endl;
 			createYOLOEngine(nvinfer1::DataType::kINT8, &calibrator);
 		}
 	}
 	else if (m_Precision == "kHALF")
 	{
+std::cout << "Unrecognized precision type " << m_Precision << std::endl;
 		if ("yolov5" == m_NetworkType)
 		{
 			create_engine_yolov5(nvinfer1::DataType::kHALF, nullptr);
@@ -214,6 +220,7 @@ void Yolo::createYOLOEngine(const nvinfer1::DataType dataType, Int8EntropyCalibr
         }
         else if (m_configBlocks.at(i).at("type") == "convolutional")
         {
+std::cout << "Yolo engine is executed." << std::endl;
             std::string inputVol = dimsToString(previous->getDimensions());
             nvinfer1::ILayer* out;
             std::string layerType;
@@ -227,6 +234,7 @@ void Yolo::createYOLOEngine(const nvinfer1::DataType dataType, Int8EntropyCalibr
             if ((m_configBlocks.at(i).find("batch_normalize") != m_configBlocks.at(i).end()) &&
 				("leaky" == activation))
             {
+std::cout << "Yolo engine is executed." << std::endl;
                 out = netAddConvBNLeaky(i, m_configBlocks.at(i), weights, trtWeights, weightPtr,
                                         channels, previous, m_Network);
                 layerType = "conv-bn-leaky";
@@ -234,12 +242,14 @@ void Yolo::createYOLOEngine(const nvinfer1::DataType dataType, Int8EntropyCalibr
 			else if ((m_configBlocks.at(i).find("batch_normalize") != m_configBlocks.at(i).end()) &&
 				("mish" == activation))
 			{
+std::cout << "Yolo engine is executed." << std::endl;
 				out = net_conv_bn_mish(i, m_configBlocks.at(i), weights, trtWeights, weightPtr,
 										channels, previous, m_Network);
 				layerType = "conv-bn-mish";
 			}
             else// if("linear" == activation)
             {
+std::cout << "Yolo engine is executed." << std::endl;
                 out = netAddConvLinear(i, m_configBlocks.at(i), weights, trtWeights, weightPtr,
                                        channels, previous, m_Network);
                 layerType = "conv-linear";
@@ -392,6 +402,7 @@ void Yolo::createYOLOEngine(const nvinfer1::DataType dataType, Int8EntropyCalibr
         }
         else if (m_configBlocks.at(i).at("type") == "upsample")
         {
+std::cout << "Yolo engine is executed." << std::endl;
             std::string inputVol = dimsToString(previous->getDimensions());
             nvinfer1::ILayer* out = netAddUpsample(i - 1, m_configBlocks[i], weights, trtWeights,
                                                    channels, previous, m_Network);
@@ -450,6 +461,7 @@ void Yolo::createYOLOEngine(const nvinfer1::DataType dataType, Int8EntropyCalibr
 	config->setMaxWorkspaceSize(1 << 20);
     if (dataType == nvinfer1::DataType::kINT8)
     {
+std::cout << "Set data Int8" << std::endl;
         assert((calibrator != nullptr) && "Invalid calibrator for INT8 precision");
       //  m_Builder->setInt8Mode(true);
 		config->setFlag(nvinfer1::BuilderFlag::kINT8);
@@ -464,7 +476,13 @@ void Yolo::createYOLOEngine(const nvinfer1::DataType dataType, Int8EntropyCalibr
     }
 
     m_Builder->allowGPUFallback(true);
+config->setFlag(nvinfer1::BuilderFlag::kGPU_FALLBACK);
+        config->setDefaultDeviceType(DeviceType::kDLA);
+        config->setDLACore(0);
+        config->setFlag(nvinfer1::BuilderFlag::kSTRICT_TYPES);
+
     int nbLayers = m_Network->getNbLayers();
+std::cout << "Get NB layers " << m_Network->getNbLayers() << std::endl;
     int layersOnDLA = 0;
  //   std::cout << "Total number of layers: " << nbLayers << std::endl;
     for (int i = 0; i < nbLayers; i++)
@@ -472,7 +490,10 @@ void Yolo::createYOLOEngine(const nvinfer1::DataType dataType, Int8EntropyCalibr
         nvinfer1::ILayer* curLayer = m_Network->getLayer(i);
         if (m_DeviceType == "kDLA" && m_Builder->canRunOnDLA(curLayer))
         {
-            m_Builder->setDeviceType(curLayer, nvinfer1::DeviceType::kDLA);
+            //m_Builder->setDeviceType(curLayer, nvinfer1::DeviceType::kDLA);
+
+			
+			config->setDeviceType(curLayer, nvinfer1::DeviceType::kDLA);
             layersOnDLA++;
             std::cout << "Set layer " << curLayer->getName() << " to run on DLA" << std::endl;
         }
@@ -480,6 +501,7 @@ void Yolo::createYOLOEngine(const nvinfer1::DataType dataType, Int8EntropyCalibr
  //   std::cout << "Total number of layers on DLA: " << layersOnDLA << std::endl;
 
     // Build the engine
+    m_Builder->allowGPUFallback(true);
     std::cout << "Building the TensorRT Engine..." << std::endl;
     m_Engine = m_Builder->buildEngineWithConfig(*m_Network,*config);
     assert(m_Engine != nullptr);
@@ -667,6 +689,7 @@ void Yolo::create_engine_yolov5(const nvinfer1::DataType dataType,
 		}
 		else if ("Focus" == m_configBlocks.at(i).at("type"))
 		{
+			std::cout << "Conv is executed." << std::endl;
 			std::string inputVol = dimsToString(previous->getDimensions());
 			std::vector<int> args = parse_int_list(m_configBlocks[i]["args"]);
 			int filters = args[0];
@@ -689,6 +712,7 @@ void Yolo::create_engine_yolov5(const nvinfer1::DataType dataType,
 		}//end focus
 		else if ("Conv" == m_configBlocks.at(i).at("type"))
 		{
+			std::cout << "Conv is executed." << std::endl;
 			std::string inputVol = dimsToString(previous->getDimensions());
 			std::vector<int> args = parse_int_list(m_configBlocks[i]["args"]);
 			int filters = args[0];
@@ -706,6 +730,7 @@ void Yolo::create_engine_yolov5(const nvinfer1::DataType dataType,
 		}//end Conv
 		else if ("BottleneckCSP" == m_configBlocks.at(i).at("type"))
 		{
+			std::cout << "Conv is executed." << std::endl;
 			std::string inputVol = dimsToString(previous->getDimensions());
 			int filters = 0;
 			bool short_cut =true;
@@ -740,6 +765,7 @@ void Yolo::create_engine_yolov5(const nvinfer1::DataType dataType,
 		}//end SPP
 		else if ("nn.Upsample" == m_configBlocks.at(i).at("type"))
 		{
+std::cout << "Conv is executed." << std::endl;
 			std::string inputVol = dimsToString(previous->getDimensions());
 			int scale = 0;
 			parse_upsample(m_configBlocks[i]["args"], scale);
@@ -754,6 +780,7 @@ void Yolo::create_engine_yolov5(const nvinfer1::DataType dataType,
 		}//end upsample
 		else if ("Concat" == m_configBlocks.at(i).at("type"))
 		{
+std::cout << "Conv is executed." << std::endl;
 			std::string inputVol = dimsToString(previous->getDimensions());
 			int n_dimension = std::stoi(m_configBlocks[i]["args"]);
 			std::vector<int> vec_from = parse_int_list(m_configBlocks[i]["from"]);
@@ -780,6 +807,7 @@ void Yolo::create_engine_yolov5(const nvinfer1::DataType dataType,
 		}//end concat
 		else if ("Detect" == m_configBlocks.at(i).at("type"))
 		{
+std::cout << "Conv is executed." << std::endl;
 			std::string inputVol = dimsToString(previous->getDimensions());
 			std::vector<int> vec_from = parse_int_list(m_configBlocks[i]["from"]);
 			for (auto &f : vec_from)
@@ -790,6 +818,7 @@ void Yolo::create_engine_yolov5(const nvinfer1::DataType dataType,
 			std::string s_model_name = "model." + std::to_string(i - 1);
             for (size_t ind_from = 0; ind_from < vec_from.size(); ++ind_from)
 			{
+std::cout << "Conv is executed.1" << std::endl;
 				int n_filters = (5 + _n_classes) * 3;
 				int from = vec_from[ind_from];
 				auto conv = layer_conv(trtWeights, s_model_name+".m."+std::to_string(ind_from),

@@ -1,0 +1,1090 @@
+xaviernx@xaviernx-desktop:~/yolo-tensorrt/build$ ./yolo-trt 
+Unrecognized precision type kINT8
+Yolo engine created 
+File does not exist : ../configs/yolov4-kINT8-batch1.engine
+Loading pre-trained weights...
+Loading complete!
+      layer               inp_size            out_size       weightPtr
+Yolo engine is executed.
+Yolo engine is executed.
+(1)   conv-bn-mish      3 x 416 x 416      32 x 416 x 416    992   
+Yolo engine is executed.
+Yolo engine is executed.
+(2)   conv-bn-mish     32 x 416 x 416      64 x 208 x 208    19680 
+Yolo engine is executed.
+Yolo engine is executed.
+(3)   conv-bn-mish     64 x 208 x 208      64 x 208 x 208    24032 
+(4)   route                  -             64 x 208 x 208    24032 
+Yolo engine is executed.
+Yolo engine is executed.
+(5)   conv-bn-mish     64 x 208 x 208      64 x 208 x 208    28384 
+Yolo engine is executed.
+Yolo engine is executed.
+(6)   conv-bn-mish     64 x 208 x 208      32 x 208 x 208    30560 
+Yolo engine is executed.
+Yolo engine is executed.
+(7)   conv-bn-mish     32 x 208 x 208      64 x 208 x 208    49248 
+(8)   skip             64 x 208 x 208      64 x 208 x 208        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(9)   conv-bn-mish     64 x 208 x 208      64 x 208 x 208    53600 
+(10)  route                  -            128 x 208 x 208    53600 
+Yolo engine is executed.
+Yolo engine is executed.
+(11)  conv-bn-mish    128 x 208 x 208      64 x 208 x 208    62048 
+Yolo engine is executed.
+Yolo engine is executed.
+(12)  conv-bn-mish     64 x 208 x 208     128 x 104 x 104    136288
+Yolo engine is executed.
+Yolo engine is executed.
+(13)  conv-bn-mish    128 x 104 x 104      64 x 104 x 104    144736
+(14)  route                  -            128 x 104 x 104    144736
+Yolo engine is executed.
+Yolo engine is executed.
+(15)  conv-bn-mish    128 x 104 x 104      64 x 104 x 104    153184
+Yolo engine is executed.
+Yolo engine is executed.
+(16)  conv-bn-mish     64 x 104 x 104      64 x 104 x 104    157536
+Yolo engine is executed.
+Yolo engine is executed.
+(17)  conv-bn-mish     64 x 104 x 104      64 x 104 x 104    194656
+(18)  skip             64 x 104 x 104      64 x 104 x 104        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(19)  conv-bn-mish     64 x 104 x 104      64 x 104 x 104    199008
+Yolo engine is executed.
+Yolo engine is executed.
+(20)  conv-bn-mish     64 x 104 x 104      64 x 104 x 104    236128
+(21)  skip             64 x 104 x 104      64 x 104 x 104        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(22)  conv-bn-mish     64 x 104 x 104      64 x 104 x 104    240480
+(23)  route                  -            128 x 104 x 104    240480
+Yolo engine is executed.
+Yolo engine is executed.
+(24)  conv-bn-mish    128 x 104 x 104     128 x 104 x 104    257376
+Yolo engine is executed.
+Yolo engine is executed.
+(25)  conv-bn-mish    128 x 104 x 104     256 x  52 x  52    553312
+Yolo engine is executed.
+Yolo engine is executed.
+(26)  conv-bn-mish    256 x  52 x  52     128 x  52 x  52    586592
+(27)  route                  -            256 x  52 x  52    586592
+Yolo engine is executed.
+Yolo engine is executed.
+(28)  conv-bn-mish    256 x  52 x  52     128 x  52 x  52    619872
+Yolo engine is executed.
+Yolo engine is executed.
+(29)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    636768
+Yolo engine is executed.
+Yolo engine is executed.
+(30)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    784736
+(31)  skip            128 x  52 x  52     128 x  52 x  52        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(32)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    801632
+Yolo engine is executed.
+Yolo engine is executed.
+(33)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    949600
+(34)  skip            128 x  52 x  52     128 x  52 x  52        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(35)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    966496
+Yolo engine is executed.
+Yolo engine is executed.
+(36)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1114464
+(37)  skip            128 x  52 x  52     128 x  52 x  52        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(38)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1131360
+Yolo engine is executed.
+Yolo engine is executed.
+(39)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1279328
+(40)  skip            128 x  52 x  52     128 x  52 x  52        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(41)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1296224
+Yolo engine is executed.
+Yolo engine is executed.
+(42)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1444192
+(43)  skip            128 x  52 x  52     128 x  52 x  52        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(44)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1461088
+Yolo engine is executed.
+Yolo engine is executed.
+(45)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1609056
+(46)  skip            128 x  52 x  52     128 x  52 x  52        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(47)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1625952
+Yolo engine is executed.
+Yolo engine is executed.
+(48)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1773920
+(49)  skip            128 x  52 x  52     128 x  52 x  52        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(50)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1790816
+Yolo engine is executed.
+Yolo engine is executed.
+(51)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1938784
+(52)  skip            128 x  52 x  52     128 x  52 x  52        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(53)  conv-bn-mish    128 x  52 x  52     128 x  52 x  52    1955680
+(54)  route                  -            256 x  52 x  52    1955680
+Yolo engine is executed.
+Yolo engine is executed.
+(55)  conv-bn-mish    256 x  52 x  52     256 x  52 x  52    2022240
+Yolo engine is executed.
+Yolo engine is executed.
+(56)  conv-bn-mish    256 x  52 x  52     512 x  26 x  26    3203936
+Yolo engine is executed.
+Yolo engine is executed.
+(57)  conv-bn-mish    512 x  26 x  26     256 x  26 x  26    3336032
+(58)  route                  -            512 x  26 x  26    3336032
+Yolo engine is executed.
+Yolo engine is executed.
+(59)  conv-bn-mish    512 x  26 x  26     256 x  26 x  26    3468128
+Yolo engine is executed.
+Yolo engine is executed.
+(60)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    3534688
+Yolo engine is executed.
+Yolo engine is executed.
+(61)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    4125536
+(62)  skip            256 x  26 x  26     256 x  26 x  26        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(63)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    4192096
+Yolo engine is executed.
+Yolo engine is executed.
+(64)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    4782944
+(65)  skip            256 x  26 x  26     256 x  26 x  26        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(66)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    4849504
+Yolo engine is executed.
+Yolo engine is executed.
+(67)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    5440352
+(68)  skip            256 x  26 x  26     256 x  26 x  26        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(69)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    5506912
+Yolo engine is executed.
+Yolo engine is executed.
+(70)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    6097760
+(71)  skip            256 x  26 x  26     256 x  26 x  26        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(72)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    6164320
+Yolo engine is executed.
+Yolo engine is executed.
+(73)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    6755168
+(74)  skip            256 x  26 x  26     256 x  26 x  26        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(75)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    6821728
+Yolo engine is executed.
+Yolo engine is executed.
+(76)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    7412576
+(77)  skip            256 x  26 x  26     256 x  26 x  26        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(78)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    7479136
+Yolo engine is executed.
+Yolo engine is executed.
+(79)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    8069984
+(80)  skip            256 x  26 x  26     256 x  26 x  26        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(81)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    8136544
+Yolo engine is executed.
+Yolo engine is executed.
+(82)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    8727392
+(83)  skip            256 x  26 x  26     256 x  26 x  26        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(84)  conv-bn-mish    256 x  26 x  26     256 x  26 x  26    8793952
+(85)  route                  -            512 x  26 x  26    8793952
+Yolo engine is executed.
+Yolo engine is executed.
+(86)  conv-bn-mish    512 x  26 x  26     512 x  26 x  26    9058144
+Yolo engine is executed.
+Yolo engine is executed.
+(87)  conv-bn-mish    512 x  26 x  26    1024 x  13 x  13    13780832
+Yolo engine is executed.
+Yolo engine is executed.
+(88)  conv-bn-mish   1024 x  13 x  13     512 x  13 x  13    14307168
+(89)  route                  -           1024 x  13 x  13    14307168
+Yolo engine is executed.
+Yolo engine is executed.
+(90)  conv-bn-mish   1024 x  13 x  13     512 x  13 x  13    14833504
+Yolo engine is executed.
+Yolo engine is executed.
+(91)  conv-bn-mish    512 x  13 x  13     512 x  13 x  13    15097696
+Yolo engine is executed.
+Yolo engine is executed.
+(92)  conv-bn-mish    512 x  13 x  13     512 x  13 x  13    17459040
+(93)  skip            512 x  13 x  13     512 x  13 x  13        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(94)  conv-bn-mish    512 x  13 x  13     512 x  13 x  13    17723232
+Yolo engine is executed.
+Yolo engine is executed.
+(95)  conv-bn-mish    512 x  13 x  13     512 x  13 x  13    20084576
+(96)  skip            512 x  13 x  13     512 x  13 x  13        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(97)  conv-bn-mish    512 x  13 x  13     512 x  13 x  13    20348768
+Yolo engine is executed.
+Yolo engine is executed.
+(98)  conv-bn-mish    512 x  13 x  13     512 x  13 x  13    22710112
+(99)  skip            512 x  13 x  13     512 x  13 x  13        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(100) conv-bn-mish    512 x  13 x  13     512 x  13 x  13    22974304
+Yolo engine is executed.
+Yolo engine is executed.
+(101) conv-bn-mish    512 x  13 x  13     512 x  13 x  13    25335648
+(102) skip            512 x  13 x  13     512 x  13 x  13        - 
+Yolo engine is executed.
+Yolo engine is executed.
+(103) conv-bn-mish    512 x  13 x  13     512 x  13 x  13    25599840
+(104) route                  -           1024 x  13 x  13    25599840
+Yolo engine is executed.
+Yolo engine is executed.
+(105) conv-bn-mish   1024 x  13 x  13    1024 x  13 x  13    26652512
+Yolo engine is executed.
+Yolo engine is executed.
+(106) conv-bn-leaky  1024 x  13 x  13     512 x  13 x  13    27178848
+Yolo engine is executed.
+Yolo engine is executed.
+(107) conv-bn-leaky   512 x  13 x  13    1024 x  13 x  13    31901536
+Yolo engine is executed.
+Yolo engine is executed.
+(108) conv-bn-leaky  1024 x  13 x  13     512 x  13 x  13    32427872
+(109) maxpool         512 x  13 x  13     512 x  13 x  13    32427872
+(110) route                  -            512 x  13 x  13    32427872
+(111) maxpool         512 x  13 x  13     512 x  13 x  13    32427872
+(112) route                  -            512 x  13 x  13    32427872
+(113) maxpool         512 x  13 x  13     512 x  13 x  13    32427872
+(114) route                  -           2048 x  13 x  13    32427872
+Yolo engine is executed.
+Yolo engine is executed.
+(115) conv-bn-leaky  2048 x  13 x  13     512 x  13 x  13    33478496
+Yolo engine is executed.
+Yolo engine is executed.
+(116) conv-bn-leaky   512 x  13 x  13    1024 x  13 x  13    38201184
+Yolo engine is executed.
+Yolo engine is executed.
+(117) conv-bn-leaky  1024 x  13 x  13     512 x  13 x  13    38727520
+Yolo engine is executed.
+Yolo engine is executed.
+(118) conv-bn-leaky   512 x  13 x  13     256 x  13 x  13    38859616
+Yolo engine is executed.
+(119) upsample        256 x  13 x  13     256 x  26 x  26        - 
+(120) route                  -            512 x  26 x  26    38859616
+Yolo engine is executed.
+Yolo engine is executed.
+(121) conv-bn-leaky   512 x  26 x  26     256 x  26 x  26    38991712
+(122) route                  -            512 x  26 x  26    38991712
+Yolo engine is executed.
+Yolo engine is executed.
+(123) conv-bn-leaky   512 x  26 x  26     256 x  26 x  26    39123808
+Yolo engine is executed.
+Yolo engine is executed.
+(124) conv-bn-leaky   256 x  26 x  26     512 x  26 x  26    40305504
+Yolo engine is executed.
+Yolo engine is executed.
+(125) conv-bn-leaky   512 x  26 x  26     256 x  26 x  26    40437600
+Yolo engine is executed.
+Yolo engine is executed.
+(126) conv-bn-leaky   256 x  26 x  26     512 x  26 x  26    41619296
+Yolo engine is executed.
+Yolo engine is executed.
+(127) conv-bn-leaky   512 x  26 x  26     256 x  26 x  26    41751392
+Yolo engine is executed.
+Yolo engine is executed.
+(128) conv-bn-leaky   256 x  26 x  26     128 x  26 x  26    41784672
+Yolo engine is executed.
+(129) upsample        128 x  26 x  26     128 x  52 x  52        - 
+(130) route                  -            256 x  52 x  52    41784672
+Yolo engine is executed.
+Yolo engine is executed.
+(131) conv-bn-leaky   256 x  52 x  52     128 x  52 x  52    41817952
+(132) route                  -            256 x  52 x  52    41817952
+Yolo engine is executed.
+Yolo engine is executed.
+(133) conv-bn-leaky   256 x  52 x  52     128 x  52 x  52    41851232
+Yolo engine is executed.
+Yolo engine is executed.
+(134) conv-bn-leaky   128 x  52 x  52     256 x  52 x  52    42147168
+Yolo engine is executed.
+Yolo engine is executed.
+(135) conv-bn-leaky   256 x  52 x  52     128 x  52 x  52    42180448
+Yolo engine is executed.
+Yolo engine is executed.
+(136) conv-bn-leaky   128 x  52 x  52     256 x  52 x  52    42476384
+Yolo engine is executed.
+Yolo engine is executed.
+(137) conv-bn-leaky   256 x  52 x  52     128 x  52 x  52    42509664
+Yolo engine is executed.
+Yolo engine is executed.
+(138) conv-bn-leaky   128 x  52 x  52     256 x  52 x  52    42805600
+Yolo engine is executed.
+Yolo engine is executed.
+(139) conv-linear     256 x  52 x  52     255 x  52 x  52    42871135
+(140) yolo            255 x  52 x  52     255 x  52 x  52    42871135
+(141) route                  -            128 x  52 x  52    42871135
+Yolo engine is executed.
+Yolo engine is executed.
+(142) conv-bn-leaky   128 x  52 x  52     256 x  26 x  26    43167071
+(143) route                  -            512 x  26 x  26    43167071
+Yolo engine is executed.
+Yolo engine is executed.
+(144) conv-bn-leaky   512 x  26 x  26     256 x  26 x  26    43299167
+Yolo engine is executed.
+Yolo engine is executed.
+(145) conv-bn-leaky   256 x  26 x  26     512 x  26 x  26    44480863
+Yolo engine is executed.
+Yolo engine is executed.
+(146) conv-bn-leaky   512 x  26 x  26     256 x  26 x  26    44612959
+Yolo engine is executed.
+Yolo engine is executed.
+(147) conv-bn-leaky   256 x  26 x  26     512 x  26 x  26    45794655
+Yolo engine is executed.
+Yolo engine is executed.
+(148) conv-bn-leaky   512 x  26 x  26     256 x  26 x  26    45926751
+Yolo engine is executed.
+Yolo engine is executed.
+(149) conv-bn-leaky   256 x  26 x  26     512 x  26 x  26    47108447
+Yolo engine is executed.
+Yolo engine is executed.
+(150) conv-linear     512 x  26 x  26     255 x  26 x  26    47239262
+(151) yolo            255 x  26 x  26     255 x  26 x  26    47239262
+(152) route                  -            256 x  26 x  26    47239262
+Yolo engine is executed.
+Yolo engine is executed.
+(153) conv-bn-leaky   256 x  26 x  26     512 x  13 x  13    48420958
+(154) route                  -           1024 x  13 x  13    48420958
+Yolo engine is executed.
+Yolo engine is executed.
+(155) conv-bn-leaky  1024 x  13 x  13     512 x  13 x  13    48947294
+Yolo engine is executed.
+Yolo engine is executed.
+(156) conv-bn-leaky   512 x  13 x  13    1024 x  13 x  13    53669982
+Yolo engine is executed.
+Yolo engine is executed.
+(157) conv-bn-leaky  1024 x  13 x  13     512 x  13 x  13    54196318
+Yolo engine is executed.
+Yolo engine is executed.
+(158) conv-bn-leaky   512 x  13 x  13    1024 x  13 x  13    58919006
+Yolo engine is executed.
+Yolo engine is executed.
+(159) conv-bn-leaky  1024 x  13 x  13     512 x  13 x  13    59445342
+Yolo engine is executed.
+Yolo engine is executed.
+(160) conv-bn-leaky   512 x  13 x  13    1024 x  13 x  13    64168030
+Yolo engine is executed.
+Yolo engine is executed.
+(161) conv-linear    1024 x  13 x  13     255 x  13 x  13    64429405
+(162) yolo            255 x  13 x  13     255 x  13 x  13    64429405
+File does not exist : ../configs/yolov4-kINT8-batch1.engine
+Set data Int8
+Get NB layers 367
+Set layer conv_1 to run on DLA
+Set layer batch_norm_1 to run on DLA
+Set layer conv_2 to run on DLA
+Set layer batch_norm_2 to run on DLA
+Set layer conv_3 to run on DLA
+Set layer batch_norm_3 to run on DLA
+Set layer conv_5 to run on DLA
+Set layer batch_norm_5 to run on DLA
+Set layer conv_6 to run on DLA
+Set layer batch_norm_6 to run on DLA
+Set layer conv_7 to run on DLA
+Set layer batch_norm_7 to run on DLA
+Set layer shortcut_8 to run on DLA
+Set layer conv_9 to run on DLA
+Set layer batch_norm_9 to run on DLA
+Set layer route_9 to run on DLA
+Set layer conv_11 to run on DLA
+Set layer batch_norm_11 to run on DLA
+Set layer conv_12 to run on DLA
+Set layer batch_norm_12 to run on DLA
+Set layer conv_13 to run on DLA
+Set layer batch_norm_13 to run on DLA
+Set layer conv_15 to run on DLA
+Set layer batch_norm_15 to run on DLA
+Set layer conv_16 to run on DLA
+Set layer batch_norm_16 to run on DLA
+Set layer conv_17 to run on DLA
+Set layer batch_norm_17 to run on DLA
+Set layer shortcut_18 to run on DLA
+Set layer conv_19 to run on DLA
+Set layer batch_norm_19 to run on DLA
+Set layer conv_20 to run on DLA
+Set layer batch_norm_20 to run on DLA
+Set layer shortcut_21 to run on DLA
+Set layer conv_22 to run on DLA
+Set layer batch_norm_22 to run on DLA
+Set layer route_22 to run on DLA
+Set layer conv_24 to run on DLA
+Set layer batch_norm_24 to run on DLA
+Set layer conv_25 to run on DLA
+Set layer batch_norm_25 to run on DLA
+Set layer conv_26 to run on DLA
+Set layer batch_norm_26 to run on DLA
+Set layer conv_28 to run on DLA
+Set layer batch_norm_28 to run on DLA
+Set layer conv_29 to run on DLA
+Set layer batch_norm_29 to run on DLA
+Set layer conv_30 to run on DLA
+Set layer batch_norm_30 to run on DLA
+Set layer shortcut_31 to run on DLA
+Set layer conv_32 to run on DLA
+Set layer batch_norm_32 to run on DLA
+Set layer conv_33 to run on DLA
+Set layer batch_norm_33 to run on DLA
+Set layer shortcut_34 to run on DLA
+Set layer conv_35 to run on DLA
+Set layer batch_norm_35 to run on DLA
+Set layer conv_36 to run on DLA
+Set layer batch_norm_36 to run on DLA
+Set layer shortcut_37 to run on DLA
+Set layer conv_38 to run on DLA
+Set layer batch_norm_38 to run on DLA
+Set layer conv_39 to run on DLA
+Set layer batch_norm_39 to run on DLA
+Set layer shortcut_40 to run on DLA
+Set layer conv_41 to run on DLA
+Set layer batch_norm_41 to run on DLA
+Set layer conv_42 to run on DLA
+Set layer batch_norm_42 to run on DLA
+Set layer shortcut_43 to run on DLA
+Set layer conv_44 to run on DLA
+Set layer batch_norm_44 to run on DLA
+Set layer conv_45 to run on DLA
+Set layer batch_norm_45 to run on DLA
+Set layer shortcut_46 to run on DLA
+Set layer conv_47 to run on DLA
+Set layer batch_norm_47 to run on DLA
+Set layer conv_48 to run on DLA
+Set layer batch_norm_48 to run on DLA
+Set layer shortcut_49 to run on DLA
+Set layer conv_50 to run on DLA
+Set layer batch_norm_50 to run on DLA
+Set layer conv_51 to run on DLA
+Set layer batch_norm_51 to run on DLA
+Set layer shortcut_52 to run on DLA
+Set layer conv_53 to run on DLA
+Set layer batch_norm_53 to run on DLA
+Set layer route_53 to run on DLA
+Set layer conv_55 to run on DLA
+Set layer batch_norm_55 to run on DLA
+Set layer conv_56 to run on DLA
+Set layer batch_norm_56 to run on DLA
+Set layer conv_57 to run on DLA
+Set layer batch_norm_57 to run on DLA
+Set layer conv_59 to run on DLA
+Set layer batch_norm_59 to run on DLA
+Set layer conv_60 to run on DLA
+Set layer batch_norm_60 to run on DLA
+Set layer conv_61 to run on DLA
+Set layer batch_norm_61 to run on DLA
+Set layer shortcut_62 to run on DLA
+Set layer conv_63 to run on DLA
+Set layer batch_norm_63 to run on DLA
+Set layer conv_64 to run on DLA
+Set layer batch_norm_64 to run on DLA
+Set layer shortcut_65 to run on DLA
+Set layer conv_66 to run on DLA
+Set layer batch_norm_66 to run on DLA
+Set layer conv_67 to run on DLA
+Set layer batch_norm_67 to run on DLA
+Set layer shortcut_68 to run on DLA
+Set layer conv_69 to run on DLA
+Set layer batch_norm_69 to run on DLA
+Set layer conv_70 to run on DLA
+Set layer batch_norm_70 to run on DLA
+Set layer shortcut_71 to run on DLA
+Set layer conv_72 to run on DLA
+Set layer batch_norm_72 to run on DLA
+Set layer conv_73 to run on DLA
+Set layer batch_norm_73 to run on DLA
+Set layer shortcut_74 to run on DLA
+Set layer conv_75 to run on DLA
+Set layer batch_norm_75 to run on DLA
+Set layer conv_76 to run on DLA
+Set layer batch_norm_76 to run on DLA
+Set layer shortcut_77 to run on DLA
+Set layer conv_78 to run on DLA
+Set layer batch_norm_78 to run on DLA
+Set layer conv_79 to run on DLA
+Set layer batch_norm_79 to run on DLA
+Set layer shortcut_80 to run on DLA
+Set layer conv_81 to run on DLA
+Set layer batch_norm_81 to run on DLA
+Set layer conv_82 to run on DLA
+Set layer batch_norm_82 to run on DLA
+Set layer shortcut_83 to run on DLA
+Set layer conv_84 to run on DLA
+Set layer batch_norm_84 to run on DLA
+Set layer route_84 to run on DLA
+Set layer conv_86 to run on DLA
+Set layer batch_norm_86 to run on DLA
+Set layer conv_87 to run on DLA
+Set layer batch_norm_87 to run on DLA
+Set layer conv_88 to run on DLA
+Set layer batch_norm_88 to run on DLA
+Set layer conv_90 to run on DLA
+Set layer batch_norm_90 to run on DLA
+Set layer conv_91 to run on DLA
+Set layer batch_norm_91 to run on DLA
+Set layer conv_92 to run on DLA
+Set layer batch_norm_92 to run on DLA
+Set layer shortcut_93 to run on DLA
+Set layer conv_94 to run on DLA
+Set layer batch_norm_94 to run on DLA
+Set layer conv_95 to run on DLA
+Set layer batch_norm_95 to run on DLA
+Set layer shortcut_96 to run on DLA
+Set layer conv_97 to run on DLA
+Set layer batch_norm_97 to run on DLA
+Set layer conv_98 to run on DLA
+Set layer batch_norm_98 to run on DLA
+Set layer shortcut_99 to run on DLA
+Set layer conv_100 to run on DLA
+Set layer batch_norm_100 to run on DLA
+Set layer conv_101 to run on DLA
+Set layer batch_norm_101 to run on DLA
+Set layer shortcut_102 to run on DLA
+Set layer conv_103 to run on DLA
+Set layer batch_norm_103 to run on DLA
+Set layer route_103 to run on DLA
+Set layer conv_105 to run on DLA
+Set layer batch_norm_105 to run on DLA
+Set layer conv_106 to run on DLA
+Set layer batch_norm_106 to run on DLA
+ERROR: leaky_106: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_107 to run on DLA
+Set layer batch_norm_107 to run on DLA
+ERROR: leaky_107: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_108 to run on DLA
+Set layer batch_norm_108 to run on DLA
+ERROR: leaky_108: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer maxpool_109 to run on DLA
+Set layer route_113 to run on DLA
+Set layer conv_115 to run on DLA
+Set layer batch_norm_115 to run on DLA
+ERROR: leaky_115: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_116 to run on DLA
+Set layer batch_norm_116 to run on DLA
+ERROR: leaky_116: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_117 to run on DLA
+Set layer batch_norm_117 to run on DLA
+ERROR: leaky_117: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_118 to run on DLA
+Set layer batch_norm_118 to run on DLA
+ERROR: leaky_118: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_121 to run on DLA
+Set layer batch_norm_121 to run on DLA
+ERROR: leaky_121: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer route_121 to run on DLA
+Set layer conv_123 to run on DLA
+Set layer batch_norm_123 to run on DLA
+ERROR: leaky_123: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_124 to run on DLA
+Set layer batch_norm_124 to run on DLA
+ERROR: leaky_124: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_125 to run on DLA
+Set layer batch_norm_125 to run on DLA
+ERROR: leaky_125: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_126 to run on DLA
+Set layer batch_norm_126 to run on DLA
+ERROR: leaky_126: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_127 to run on DLA
+Set layer batch_norm_127 to run on DLA
+ERROR: leaky_127: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_128 to run on DLA
+Set layer batch_norm_128 to run on DLA
+ERROR: leaky_128: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_131 to run on DLA
+Set layer batch_norm_131 to run on DLA
+ERROR: leaky_131: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer route_131 to run on DLA
+Set layer conv_133 to run on DLA
+Set layer batch_norm_133 to run on DLA
+ERROR: leaky_133: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_134 to run on DLA
+Set layer batch_norm_134 to run on DLA
+ERROR: leaky_134: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_135 to run on DLA
+Set layer batch_norm_135 to run on DLA
+ERROR: leaky_135: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_136 to run on DLA
+Set layer batch_norm_136 to run on DLA
+ERROR: leaky_136: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_137 to run on DLA
+Set layer batch_norm_137 to run on DLA
+ERROR: leaky_137: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_138 to run on DLA
+Set layer batch_norm_138 to run on DLA
+ERROR: leaky_138: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_139 to run on DLA
+Set layer conv_142 to run on DLA
+Set layer batch_norm_142 to run on DLA
+ERROR: leaky_142: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer route_142 to run on DLA
+Set layer conv_144 to run on DLA
+Set layer batch_norm_144 to run on DLA
+ERROR: leaky_144: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_145 to run on DLA
+Set layer batch_norm_145 to run on DLA
+ERROR: leaky_145: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_146 to run on DLA
+Set layer batch_norm_146 to run on DLA
+ERROR: leaky_146: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_147 to run on DLA
+Set layer batch_norm_147 to run on DLA
+ERROR: leaky_147: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_148 to run on DLA
+Set layer batch_norm_148 to run on DLA
+ERROR: leaky_148: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_149 to run on DLA
+Set layer batch_norm_149 to run on DLA
+ERROR: leaky_149: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_150 to run on DLA
+Set layer conv_153 to run on DLA
+Set layer batch_norm_153 to run on DLA
+ERROR: leaky_153: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer route_153 to run on DLA
+Set layer conv_155 to run on DLA
+Set layer batch_norm_155 to run on DLA
+ERROR: leaky_155: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_156 to run on DLA
+Set layer batch_norm_156 to run on DLA
+ERROR: leaky_156: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_157 to run on DLA
+Set layer batch_norm_157 to run on DLA
+ERROR: leaky_157: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_158 to run on DLA
+Set layer batch_norm_158 to run on DLA
+ERROR: leaky_158: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_159 to run on DLA
+Set layer batch_norm_159 to run on DLA
+ERROR: leaky_159: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_160 to run on DLA
+Set layer batch_norm_160 to run on DLA
+ERROR: leaky_160: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+Set layer conv_161 to run on DLA
+Building the TensorRT Engine...
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 0) [Constant] is not supported on DLA, falling back to GPU.
+WARNING: (Unnamed Layer* 1) [ElementWise]: DLA cores do not support DIV ElementWise operation.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 1) [ElementWise] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 4) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 7) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 10) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 13) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 16) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 19) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 23) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 27) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 30) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 33) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 36) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 39) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 42) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 46) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 49) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 53) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 57) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 60) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 63) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 66) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 69) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 72) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 76) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 79) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 83) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 86) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 90) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 93) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 97) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 100) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 104) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 107) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 111) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 114) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 118) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 121) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 125) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 129) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 132) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 135) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 138) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 141) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 144) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 148) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 151) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 155) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 158) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 162) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 165) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 169) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 172) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 176) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 179) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 183) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 186) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 190) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 193) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 197) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 201) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 204) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 207) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 210) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 213) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 216) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 220) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 223) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 227) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 230) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 234) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 237) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 241) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 245) [PluginV2IOExt] is not supported on DLA, falling back to GPU.
+ERROR: leaky_106: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_106 is not supported on DLA, falling back to GPU.
+ERROR: leaky_107: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_107 is not supported on DLA, falling back to GPU.
+ERROR: leaky_108: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_108 is not supported on DLA, falling back to GPU.
+WARNING: maxpool_111: DLA only supports windows in the range of [1-8].
+WARNING: Default DLA is enabled but layer maxpool_111 is not supported on DLA, falling back to GPU.
+WARNING: maxpool_113: DLA only supports windows in the range of [1-8].
+WARNING: Default DLA is enabled but layer maxpool_113 is not supported on DLA, falling back to GPU.
+ERROR: leaky_115: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_115 is not supported on DLA, falling back to GPU.
+ERROR: leaky_116: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_116 is not supported on DLA, falling back to GPU.
+ERROR: leaky_117: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_117 is not supported on DLA, falling back to GPU.
+ERROR: leaky_118: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_118 is not supported on DLA, falling back to GPU.
+WARNING: (Unnamed Layer* 271) [Deconvolution]: DLA cores do not support more than 1 groups.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 271) [Deconvolution] is not supported on DLA, falling back to GPU.
+ERROR: leaky_121: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_121 is not supported on DLA, falling back to GPU.
+ERROR: leaky_123: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_123 is not supported on DLA, falling back to GPU.
+ERROR: leaky_124: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_124 is not supported on DLA, falling back to GPU.
+ERROR: leaky_125: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_125 is not supported on DLA, falling back to GPU.
+ERROR: leaky_126: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_126 is not supported on DLA, falling back to GPU.
+ERROR: leaky_127: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_127 is not supported on DLA, falling back to GPU.
+ERROR: leaky_128: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_128 is not supported on DLA, falling back to GPU.
+WARNING: (Unnamed Layer* 294) [Deconvolution]: DLA cores do not support more than 1 groups.
+WARNING: Default DLA is enabled but layer (Unnamed Layer* 294) [Deconvolution] is not supported on DLA, falling back to GPU.
+ERROR: leaky_131: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_131 is not supported on DLA, falling back to GPU.
+ERROR: leaky_133: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_133 is not supported on DLA, falling back to GPU.
+ERROR: leaky_134: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_134 is not supported on DLA, falling back to GPU.
+ERROR: leaky_135: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_135 is not supported on DLA, falling back to GPU.
+ERROR: leaky_136: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_136 is not supported on DLA, falling back to GPU.
+ERROR: leaky_137: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_137 is not supported on DLA, falling back to GPU.
+ERROR: leaky_138: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_138 is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer yolo_0 is not supported on DLA, falling back to GPU.
+ERROR: leaky_142: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_142 is not supported on DLA, falling back to GPU.
+ERROR: leaky_144: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_144 is not supported on DLA, falling back to GPU.
+ERROR: leaky_145: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_145 is not supported on DLA, falling back to GPU.
+ERROR: leaky_146: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_146 is not supported on DLA, falling back to GPU.
+ERROR: leaky_147: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_147 is not supported on DLA, falling back to GPU.
+ERROR: leaky_148: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_148 is not supported on DLA, falling back to GPU.
+ERROR: leaky_149: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_149 is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer yolo_1 is not supported on DLA, falling back to GPU.
+ERROR: leaky_153: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_153 is not supported on DLA, falling back to GPU.
+ERROR: leaky_155: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_155 is not supported on DLA, falling back to GPU.
+ERROR: leaky_156: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_156 is not supported on DLA, falling back to GPU.
+ERROR: leaky_157: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_157 is not supported on DLA, falling back to GPU.
+ERROR: leaky_158: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_158 is not supported on DLA, falling back to GPU.
+ERROR: leaky_159: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_159 is not supported on DLA, falling back to GPU.
+ERROR: leaky_160: ActivationLayer (with ActivationType = LEAKY_RELU) not supported for DLA.
+WARNING: Default DLA is enabled but layer leaky_160 is not supported on DLA, falling back to GPU.
+WARNING: Default DLA is enabled but layer yolo_2 is not supported on DLA, falling back to GPU.
+Using cached calibration table to build the engine
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_149
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_8
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_18
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_21
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_31
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_34
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_37
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_40
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_43
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_46
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_49
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_52
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_62
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_65
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_68
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_71
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_74
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_77
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_80
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_83
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_93
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_96
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_99
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer shortcut_102
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_1
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_2
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_6
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_7
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_11
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_12
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_16
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_17
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_20
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_24
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_25
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_29
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_30
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_33
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_36
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_39
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_42
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_45
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_48
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_51
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_55
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_60
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_61
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_64
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_67
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_70
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_73
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_76
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_79
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_82
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_86
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_91
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_92
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_95
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_98
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_101
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_105
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_106
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_107
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_108
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_115
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_116
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_117
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_118
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_123
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_124
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_125
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_126
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_127
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_128
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_133
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_134
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_135
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_136
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_137
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_144
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_145
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_146
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_147
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_148
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_155
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_156
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_157
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_158
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_159
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_160
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer maxpool_109
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_139
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_150
+WARNING: DLA supports only 8 subgraphs per DLA core. Switching to GPU for layer conv_161
+Using cached calibration table to build the engine
+WARNING: No implementation of layer (Unnamed Layer* 0) [Constant] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 4) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 7) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 10) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 13) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 16) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 19) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 23) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 27) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 30) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 33) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 36) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 39) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 42) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 46) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 49) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 53) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 57) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 60) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 63) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 66) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 69) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 72) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 76) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 79) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 83) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 86) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 90) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 93) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 97) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 100) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 104) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 107) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 111) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 114) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 118) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 121) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 125) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 129) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 132) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 135) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 138) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 141) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 144) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 148) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 151) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 155) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 158) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 162) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 165) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 169) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 172) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 176) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 179) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 183) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 186) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 190) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 193) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 197) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 201) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 204) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 207) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 210) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 213) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 216) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 220) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 223) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 227) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 230) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 234) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 237) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 241) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 245) [PluginV2IOExt] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 271) [Deconvolution] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer (Unnamed Layer* 294) [Deconvolution] obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer conv_139 obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer yolo_0 obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer conv_150 obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer yolo_1 obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer conv_161 obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation of layer yolo_2 obeys the requested constraints in strict mode. No conforming implementation was found i.e. requested layer computation precision and output precision types are ignored, using the fastest implementation.
+WARNING: No implementation obeys reformatting-free rules, at least 1 reformatting nodes are needed, now picking the fastest path instead.
+Building complete!
+Serializing the TensorRT Engine...
+Serialized plan file cached at location : ../configs/yolov4-kINT8-batch1.engine
+Loading TRT Engine...
+Loading Complete!
+pre elasped time:358.592ms
+inference elasped time:141.057ms
+post elasped time:9.33316ms
+detect elasped time:509.367ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
+pre elasped time:5.65419ms
+inference elasped time:63.743ms
+post elasped time:5.08359ms
+detect elasped time:74.7311ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
+pre elasped time:3.67903ms
+inference elasped time:63.3326ms
+post elasped time:6.01957ms
+detect elasped time:73.3321ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
+pre elasped time:3.82575ms
+inference elasped time:57.1313ms
+post elasped time:5.25435ms
+detect elasped time:66.5124ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
+pre elasped time:4.04159ms
+inference elasped time:53.3802ms
+post elasped time:4.71536ms
+detect elasped time:62.3877ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
+pre elasped time:3.76185ms
+inference elasped time:53.8922ms
+post elasped time:4.60205ms
+detect elasped time:62.5156ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
+pre elasped time:4.07622ms
+inference elasped time:54.4071ms
+post elasped time:3.25768ms
+detect elasped time:62.0121ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
+pre elasped time:3.82476ms
+inference elasped time:46.035ms
+post elasped time:3.2445ms
+detect elasped time:53.4354ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
+pre elasped time:3.39205ms
+inference elasped time:48.0537ms
+post elasped time:2.61217ms
+detect elasped time:54.3128ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
+pre elasped time:3.41122ms
+inference elasped time:47.6815ms
+post elasped time:3.54543ms
+detect elasped time:54.8929ms
+batch 0 id:1 prob:0.985109 rect:[430 x 287 from (131, 134)]
+batch 0 id:7 prob:0.647779 rect:[225 x 98 from (467, 73)]
+batch 0 id:16 prob:0.988036 rect:[182 x 301 from (130, 233)]
