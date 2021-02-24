@@ -85,7 +85,10 @@ DsImage::DsImage(const cv::Mat& mat_image_, const std::string &s_net_type_, cons
 		assert(2 * m_YOffset + resizeH == inputH);
 
         // VPI TEST: TODO: uncomment cv::resize line below
-        m_LetterboxImage = vpi_resize_image(m_OrigImage, resizeH, resizeW, VPIDeviceType::VPI_DEVICE_TYPE_CUDA);
+        printf("IMAGE FORMAT: %d\n", m_LetterboxImage.type());
+        m_LetterboxImage = vpi_resize_image(m_OrigImage, resizeH, resizeW, VPIBackend::VPI_BACKEND_CPU);
+        printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
+        printf("SUCCESS\n");    
 
 		// resizing
 		//cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(resizeW, resizeH), 0, 0, cv::INTER_CUBIC);
@@ -99,7 +102,10 @@ DsImage::DsImage(const cv::Mat& mat_image_, const std::string &s_net_type_, cons
 	else
 	{
 		// VPI TEST: TODO: uncomment cv::resize line below
-        m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIDeviceType::VPI_DEVICE_TYPE_CUDA);
+        printf("IMAGE FORMAT: %d\n", m_LetterboxImage.type());
+        m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIBackend::VPI_BACKEND_CPU);
+        printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
+        printf("SUCCESS\n");
 
         //cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(inputW, inputH), 0, 0, cv::INTER_CUBIC);
 		// converting to RGB
