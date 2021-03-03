@@ -85,10 +85,13 @@ DsImage::DsImage(const cv::Mat& mat_image_, const std::string &s_net_type_, cons
 		assert(2 * m_YOffset + resizeH == inputH);
 
         // VPI TEST: TODO: uncomment cv::resize line below
-        printf("IMAGE FORMAT: %d\n", m_LetterboxImage.type());
-        m_LetterboxImage = vpi_resize_image(m_OrigImage, resizeH, resizeW, VPIBackend::VPI_BACKEND_CPU);
-        printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
-        printf("SUCCESS\n");    
+        //printf("IMAGE FORMAT: %d\n", m_OrigImage.type());
+        //printf("DIMENSIONS BEFORE: %d/%d\n", m_OrigImage.cols, m_OrigImage.rows);
+        //printf("DIMENSIONS RESIZE: %d/%d\n", inputH, inputW);
+        m_LetterboxImage = vpi_resize_image(m_OrigImage, resizeH, resizeW, VPIBackend::VPI_BACKEND_VIC);
+        //printf("DIMENSIONS AFTER: %d/%d\n", m_LetterboxImage.cols, m_LetterboxImage.rows);
+        //printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
+        //printf("SUCCESS\n\n");        
 
 		// resizing
 		//cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(resizeW, resizeH), 0, 0, cv::INTER_CUBIC);
@@ -102,10 +105,13 @@ DsImage::DsImage(const cv::Mat& mat_image_, const std::string &s_net_type_, cons
 	else
 	{
 		// VPI TEST: TODO: uncomment cv::resize line below
-        printf("IMAGE FORMAT: %d\n", m_LetterboxImage.type());
-        m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIBackend::VPI_BACKEND_CPU);
-        printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
-        printf("SUCCESS\n");
+        //printf("IMAGE FORMAT yolo4: %d\n", m_OrigImage.type());
+        //printf("DIMENSIONS BEFORE: %d/%d\n", m_OrigImage.cols, m_OrigImage.rows);
+        //printf("DIMENSIONS RESIZE: %d/%d\n", inputH, inputW);
+        m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIBackend::VPI_BACKEND_VIC);
+        //printf("DIMENSIONS AFTER: %d/%d\n", m_LetterboxImage.cols, m_LetterboxImage.rows);
+        //printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
+        //printf("SUCCESS\n");
 
         //cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(inputW, inputH), 0, 0, cv::INTER_CUBIC);
 		// converting to RGB
