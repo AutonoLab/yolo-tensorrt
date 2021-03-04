@@ -30,12 +30,6 @@
          }                                                     \
      } while (0);
 
-// Convert a cv::Mat to a VPI image
-VPIImage create_vpi_image_from_mat(cv::Mat cv_image);
-
-// Convert a VPI Image to a cv::Mat
-//cv::Mat create_mat_from_vpi_image(VPIImage vpi_image);
-
 // Resize image
 cv::Mat vpi_resize_image(cv::Mat cv_image, uint32_t height, uint32_t width, VPIBackend backend_type = VPIBackend::VPI_BACKEND_VIC);
 

@@ -84,17 +84,17 @@ DsImage::DsImage(const cv::Mat& mat_image_, const std::string &s_net_type_, cons
 		assert(2 * m_XOffset + resizeW == inputW);
 		assert(2 * m_YOffset + resizeH == inputH);
 
-        // VPI TEST: TODO: uncomment cv::resize line below
+        // VPI TEST: TODO: uncomment to use VPI, then comment out cv::resize below
         //printf("IMAGE FORMAT: %d\n", m_OrigImage.type());
         //printf("DIMENSIONS BEFORE: %d/%d\n", m_OrigImage.cols, m_OrigImage.rows);
         //printf("DIMENSIONS RESIZE: %d/%d\n", inputH, inputW);
-        m_LetterboxImage = vpi_resize_image(m_OrigImage, resizeH, resizeW, VPIBackend::VPI_BACKEND_VIC);
+        //m_LetterboxImage = vpi_resize_image(m_OrigImage, resizeH, resizeW, VPIBackend::VPI_BACKEND_VIC);
         //printf("DIMENSIONS AFTER: %d/%d\n", m_LetterboxImage.cols, m_LetterboxImage.rows);
         //printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
         //printf("SUCCESS\n\n");        
 
 		// resizing
-		//cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(resizeW, resizeH), 0, 0, cv::INTER_CUBIC);
+		cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(resizeW, resizeH), 0, 0, cv::INTER_CUBIC);
 		// letterboxing
 		cv::copyMakeBorder(m_LetterboxImage, m_LetterboxImage, m_YOffset, m_YOffset, m_XOffset,
 			m_XOffset, cv::BORDER_CONSTANT, cv::Scalar(128, 128, 128));
@@ -104,16 +104,16 @@ DsImage::DsImage(const cv::Mat& mat_image_, const std::string &s_net_type_, cons
 	}
 	else
 	{
-		// VPI TEST: TODO: uncomment cv::resize line below
+		// VPI TEST: TODO: uncomment to use VPI, then comment out cv::resize below
         //printf("IMAGE FORMAT yolo4: %d\n", m_OrigImage.type());
         //printf("DIMENSIONS BEFORE: %d/%d\n", m_OrigImage.cols, m_OrigImage.rows);
         //printf("DIMENSIONS RESIZE: %d/%d\n", inputH, inputW);
-        m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIBackend::VPI_BACKEND_VIC);
+        //m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIBackend::VPI_BACKEND_VIC);
         //printf("DIMENSIONS AFTER: %d/%d\n", m_LetterboxImage.cols, m_LetterboxImage.rows);
         //printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
         //printf("SUCCESS\n");
 
-        //cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(inputW, inputH), 0, 0, cv::INTER_CUBIC);
+        cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(inputW, inputH), 0, 0, cv::INTER_CUBIC);
 		// converting to RGB
 		//cv::cvtColor(m_LetterboxImage, m_LetterboxImage, cv::COLOR_BGR2RGB);
 	}
@@ -165,7 +165,16 @@ DsImage::DsImage(const std::string& path, const std::string &s_net_type_, const 
 		assert(2 * m_XOffset + resizeW == inputW);
 		assert(2 * m_YOffset + resizeH == inputH);
 
-		// resizing
+		// VPI TEST: TODO: uncomment to use VPI, then comment out cv::resize below
+        //printf("IMAGE FORMAT yolo4: %d\n", m_OrigImage.type());
+        //printf("DIMENSIONS BEFORE: %d/%d\n", m_OrigImage.cols, m_OrigImage.rows);
+        //printf("DIMENSIONS RESIZE: %d/%d\n", inputH, inputW);
+        //m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIBackend::VPI_BACKEND_VIC);
+        //printf("DIMENSIONS AFTER: %d/%d\n", m_LetterboxImage.cols, m_LetterboxImage.rows);
+        //printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
+        //printf("SUCCESS\n");
+
+        // resizing
 		cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(resizeW, resizeH), 0, 0, cv::INTER_CUBIC);
 		// letterboxing
 		cv::copyMakeBorder(m_LetterboxImage, m_LetterboxImage, m_YOffset, m_YOffset, m_XOffset,
@@ -176,7 +185,16 @@ DsImage::DsImage(const std::string& path, const std::string &s_net_type_, const 
 	}
 	else
 	{
-		cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(inputW, inputH), 0, 0, cv::INTER_CUBIC);
+		// VPI TEST: TODO: uncomment to use VPI, then comment out cv::resize below
+        //printf("IMAGE FORMAT yolo4: %d\n", m_OrigImage.type());
+        //printf("DIMENSIONS BEFORE: %d/%d\n", m_OrigImage.cols, m_OrigImage.rows);
+        //printf("DIMENSIONS RESIZE: %d/%d\n", inputH, inputW);
+        //m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIBackend::VPI_BACKEND_VIC);
+        //printf("DIMENSIONS AFTER: %d/%d\n", m_LetterboxImage.cols, m_LetterboxImage.rows);
+        //printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
+        //printf("SUCCESS\n");
+
+        cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(inputW, inputH), 0, 0, cv::INTER_CUBIC);
 		// converting to RGB
 	//	cv::cvtColor(m_LetterboxImage, m_LetterboxImage, cv::COLOR_BGR2RGB);
 	}
@@ -206,6 +224,15 @@ void DsImage::letterbox(const int& inputH, const int& inputW)
 
 	assert(2 * m_XOffset + resizeW == inputW);
 	assert(2 * m_YOffset + resizeH == inputH);
+
+    // VPI TEST: TODO: uncomment to use VPI, then comment out cv::resize below
+    //printf("IMAGE FORMAT yolo4: %d\n", m_OrigImage.type());
+    //printf("DIMENSIONS BEFORE: %d/%d\n", m_OrigImage.cols, m_OrigImage.rows);
+    //printf("DIMENSIONS RESIZE: %d/%d\n", inputH, inputW);
+    //m_LetterboxImage = vpi_resize_image(m_OrigImage, inputH, inputW, VPIBackend::VPI_BACKEND_VIC);
+    //printf("DIMENSIONS AFTER: %d/%d\n", m_LetterboxImage.cols, m_LetterboxImage.rows);
+    //printf("AFTER FORMAT: %d\n", m_LetterboxImage.type());
+    //printf("SUCCESS\n");
 
 	// resizing
 	cv::resize(m_OrigImage, m_LetterboxImage, cv::Size(resizeW, resizeH), 0, 0, cv::INTER_CUBIC);

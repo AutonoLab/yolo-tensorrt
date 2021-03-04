@@ -21,44 +21,6 @@
 
 #include "vpi.h"
 
-
-/**
- * Create a VPIImage object from a cv::Mat
- */
-/*VPIImage create_vpi_image_from_mat(cv::Mat cv_image)
-{
-    VPIImage image;
-
-    // Containerize the cv::Mat in a VPIImageData struct
-    VPIImageData img_data;
-    memset(&img_data, 0, sizeof(img_data));
-    img_data.type = VPI_IMAGE_TYPE_U8; // Corresponds with OpenCV type CV_8UC1
-    img_data.numPlanes = 1;
-    img_data.planes[0].width = cv_image.cols;
-    img_data.planes[0].height = cv_image.rows;
-    img_data.planes[0].rowStride = cv_image.step[0];
-    img_data.planes[0].data = cv_image.data;
-
-    CHECK_STATUS(vpiImageWrapHostMem(&img_data, 0, &image));
-
-    return image;
-}*/
-
-/**
- * Create a cv::Mat from a VPIImage object
- */
-/*cv::Mat create_mat_from_vpi_image(VPIImage vpi_image)
-{
-    VPIImageData img_data;
-
-    // Lock the image for safe access and create the Mat
-    CHECK_STATUS(vpiImageLock(vpi_image, VPI_LOCK_READ, &img_data));
-    cv::Mat cv_image(img_data.planes[0].height, img_data.planes[0].width, CV_8UC1, img_data.planes[0].data, img_data.planes[0].pitchBytes);
-    CHECK_STATUS(vpiImageUnlock(vpi_image));
-
-    return cv_image;
-}*/
-
 /**
  * Resize an image
  * 
@@ -130,6 +92,8 @@ cv::Mat vpi_resize_image(cv::Mat cv_image, uint32_t height, uint32_t width, VPIB
 
 /**
  * Convert a cv::Mat from RGB8 to BGR8 format using the backend specified
+ *
+ * NOTE: This is not used for the Enazoe repo as there are no cvtColor calls for preprocessing
  */
 cv::Mat vpi_convert_image_format(cv::Mat cv_image, int cv_color_conversion_code, VPIBackend backend_type)
 {   
@@ -154,8 +118,8 @@ cv::Mat vpi_convert_image_format(cv::Mat cv_image, int cv_color_conversion_code,
 
     // Lock the image for safe access and create the Mat
     CHECK_STATUS(vpiImageLock(output, VPI_LOCK_READ, &img_data));
-    cv::Mat result(img_data.planes[0].height, img_data.planes[0].width, CV_8UC1, img_data.planes[0].data, img_data.planes[0].pitchBytes);
-    CHECK_STATUS(vpiImageUnlock(output));
+    return cv::Mat(img_data.planes[0].height, img_data.planes[0].width, CV_8UC1, img_data.planes[0].data, img_data.planes[0].pitchBytes);
+    /*CHECK_STATUS(vpiImageUnlock(output));
 
     // Ensure the stram is synchronized
     if (stream != NULL)
@@ -168,5 +132,5 @@ cv::Mat vpi_convert_image_format(cv::Mat cv_image, int cv_color_conversion_code,
     vpiImageDestroy(output);
     vpiStreamDestroy(stream);
 
-    return result;
+    return result;*/
 }
